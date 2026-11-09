@@ -1,0 +1,9 @@
+# Reference documentation for the Support Ticket Triage exercise.
+# One URL per line. Read by scripts/extract_metadata.py to ground screenshot analysis.
+# Seeded from links already used by the previous course; add Maestro Flow and Action Center pages here.
+
+https://docs.uipath.com/automation-cloud/automation-cloud/latest/admin-guide/about-context-grounding
+https://docs.uipath.com/uipath-cli/standalone/latest/user-guide/coding-agents
+https://docs.uipath.com/uipath-cli/standalone/latest/user-guide/uip-skills
+https://docs.uipath.com/coding-agents/standalone/latest/user-guide/cli-overview
+https://github.com/uipath/skills

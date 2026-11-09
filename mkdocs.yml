@@ -1,0 +1,93 @@
+site_name: Advanced Agentic Automation Course
+site_url: https://uipath-technical-partner-success.github.io/AgenticAdvancedWorkshop/
+site_description: Participant's handbook for the UiPath Advanced Agentic Automation Course — use Codex to build, measure, and improve a support-ticket triage flow in Maestro Flow.
+site_author: Mihai Iorga
+
+theme:
+  name: material
+  logo: assets/images/Partner Success Logo.png
+  favicon: assets/images/favicon.png
+  font:
+    text: Inter
+  palette:
+    scheme: default
+    primary: deep orange
+    accent: orange
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.integrate
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+
+hooks:
+  - hooks/split_cols.py
+
+plugins:
+  - search
+  # Localization — see Master/Localization.md. English is the master language,
+  # built at the site root. Other languages build under /<locale>/ and fall
+  # back to English for any page without a translation.
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          name: English
+          build: true
+          default: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Prerequisites:
+    - Overview: prerequisites/index.md
+    - Installation Guides: prerequisites/installation-guides.md
+  # Exercise sections are inserted here by /publish-exercise.
+  # Next Steps is archived for now (Archive/next-steps.md). Until it is restored as the
+  # last entry, /publish-exercise appends each new exercise block at the end of nav.
+  - First Notice of Loss Agent:
+    - Overview: getting-started/index.md
+    - 1. Connecting to Your Workshop Environment: getting-started/1-connect-to-your-environment.md
+    - 2. Build Your First Agent: getting-started/2-build-your-first-agent.md
+  - Support Ticket Triage:
+    - Overview: support-ticket-triage/index.md
+    - 1. Connecting to Your Workshop Environment: support-ticket-triage/1-connect-to-your-environment.md
+    - 2. Preparing the Workspace: support-ticket-triage/2-prepare-the-workspace.md
+    - 3. Building and Deploying V1: support-ticket-triage/3-build-and-deploy-v1.md
+    - 4. Running and Reviewing Batch A: support-ticket-triage/4-run-and-review-batch-a.md
+    - 5. Building V2 from Feedback: support-ticket-triage/5-build-v2-from-feedback.md
+    - 6. Running Batch B and Building V3: support-ticket-triage/6-run-batch-b-and-build-v3.md
+    - 7. Running Batch C and Comparing Versions: support-ticket-triage/7-run-batch-c-and-compare.md
+    - You did it!: support-ticket-triage/you-did-it.md
+    - If Something Breaks: support-ticket-triage/troubleshooting.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+extra:
+  generator: false
